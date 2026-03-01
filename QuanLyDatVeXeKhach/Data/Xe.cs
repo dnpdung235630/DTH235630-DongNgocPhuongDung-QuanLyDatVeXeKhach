@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,12 +9,13 @@ namespace QuanLyDatVeXeKhach.Data
     {
         public int ID { get; set; }
         public string BienSoXe { get; set; }
-        public string HangXe { get; set; }
         public int SoChoNgoi { get; set; }
-        public DateTime NamSanXuat { get; set; }
-        public double QuangDuongLanBanh { get; set; } // tính theo km 
-        public string LoaiXe { get; set; } // Limousine, giường nằm, ghế ngồi, giường phòng, hỗn hợp,...
+        public int SoChoNam { get; set; }
         public string TinhTrang { get; set; } // Hoạt động, bảo trì, sửa chữa
-    }
+        public string? HinhAnh { get; set; } 
+        public string MoTa { get; set; } // Mô tả chi tiết về xe, có thể bao gồm thông tin về tiện nghi, dịch vụ trên xe, v.v.
 
-}
+        public int LoaiXeID { get; set; } // Limousine, giường nằm, ghế ngồi, giường phòng, hỗn hợp,...
+
+        public virtual ObservableCollectionListSource<VeXe> VeXe { get; } = new();
+    }

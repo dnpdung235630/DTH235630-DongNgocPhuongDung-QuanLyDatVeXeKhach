@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,6 +13,7 @@ namespace QuanLyDatVeXeKhach.Data
         public DateTime NgayBatDau { get; set; } // Ngày bắt đầu áp dụng khuyến mãi
         public DateTime NgayKetThuc { get; set; } // Ngày kết thúc khuyến mãi
         public double PhanTramGiamGia { get; set; } // Phần trăm giảm giá áp dụng
+        public virtual ObservableCollectionListSource<ThanhToan> ThanhToan { get; } = new();
     }
 
 }

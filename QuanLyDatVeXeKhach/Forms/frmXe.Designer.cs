@@ -40,20 +40,25 @@
             btnXoa = new Button();
             btnSua = new Button();
             btnThem = new Button();
-            txtDiaChiBX = new TextBox();
             txtTenBenXe = new TextBox();
             txtXaPhuong = new TextBox();
             txtMaBX = new TextBox();
             label3 = new Label();
-            label5 = new Label();
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
+            comboBox1 = new ComboBox();
+            groupBox3 = new GroupBox();
+            label5 = new Label();
+            label6 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // groupBox2
@@ -82,7 +87,8 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Controls.Add(groupBox3);
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(btnXuat);
             groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnTimKiem);
@@ -92,12 +98,10 @@
             groupBox1.Controls.Add(btnXoa);
             groupBox1.Controls.Add(btnSua);
             groupBox1.Controls.Add(btnThem);
-            groupBox1.Controls.Add(txtDiaChiBX);
             groupBox1.Controls.Add(txtTenBenXe);
             groupBox1.Controls.Add(txtXaPhuong);
             groupBox1.Controls.Add(txtMaBX);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
@@ -189,13 +193,6 @@
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
             // 
-            // txtDiaChiBX
-            // 
-            txtDiaChiBX.Location = new Point(166, 179);
-            txtDiaChiBX.Name = "txtDiaChiBX";
-            txtDiaChiBX.Size = new Size(250, 27);
-            txtDiaChiBX.TabIndex = 11;
-            // 
             // txtTenBenXe
             // 
             txtTenBenXe.Location = new Point(592, 59);
@@ -226,15 +223,6 @@
             label3.TabIndex = 2;
             label3.Text = "Loại xe";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(450, 120);
-            label5.Name = "label5";
-            label5.Size = new Size(110, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Sơ đồ chỗ ngồi";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -262,13 +250,58 @@
             label1.TabIndex = 0;
             label1.Text = "Biển số xe";
             // 
-            // pictureBox1
+            // comboBox1
             // 
-            pictureBox1.Location = new Point(596, 115);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(165, 123);
-            pictureBox1.TabIndex = 21;
-            pictureBox1.TabStop = false;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(166, 180);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(250, 28);
+            comboBox1.TabIndex = 21;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(numericUpDown2);
+            groupBox3.Controls.Add(numericUpDown1);
+            groupBox3.Controls.Add(label6);
+            groupBox3.Controls.Add(label5);
+            groupBox3.Location = new Point(468, 92);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(281, 119);
+            groupBox3.TabIndex = 22;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Số ghế theo loại";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(30, 45);
+            label5.Name = "label5";
+            label5.Size = new Size(72, 20);
+            label5.TabIndex = 0;
+            label5.Text = "Ghế ngồi:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(8, 84);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 20);
+            label6.TabIndex = 1;
+            label6.Text = "Giường nằm:";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(124, 38);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(150, 27);
+            numericUpDown1.TabIndex = 2;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(124, 80);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(150, 27);
+            numericUpDown2.TabIndex = 3;
             // 
             // frmXe
             // 
@@ -283,7 +316,10 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
         }
 
@@ -301,15 +337,18 @@
         private Button btnXoa;
         private Button btnSua;
         private Button btnThem;
-        private TextBox txtDiaChiBX;
         private TextBox txtTenBenXe;
         private TextBox txtXaPhuong;
         private TextBox txtMaBX;
         private Label label3;
-        private Label label5;
         private Label label4;
         private Label label2;
         private Label label1;
-        private PictureBox pictureBox1;
+        private ComboBox comboBox1;
+        private GroupBox groupBox3;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
+        private Label label6;
+        private Label label5;
     }
 }
