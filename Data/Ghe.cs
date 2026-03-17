@@ -12,6 +12,7 @@ namespace QuanLyDatVeXeKhach.Data
         public string LoaiGhe { get; set; } // Ví dụ: Ghế ngồi, giường nằm
         public bool TrangThai { get; set; } // true: đã đặt, false: còn trống
         public int XeID { get; set; }
+        public string MaSoXe { get; set; } // Liên kết thông qua mã số xe được định nghĩa theo hãng xe
         public virtual ObservableCollectionListSource<Xe> Xe { get; } = new();
     }
 

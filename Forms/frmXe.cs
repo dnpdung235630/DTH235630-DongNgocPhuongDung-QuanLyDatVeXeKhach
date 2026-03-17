@@ -30,6 +30,16 @@ namespace QuanLyDatVeXeKhach.Forms
             btnTimKiem.Enabled = !giaTri;
             btnNhap.Enabled = !giaTri;
             btnXuat.Enabled = !giaTri;
+            txtMaBienSo.Enabled = !giaTri;
+            txtMaXe.Enabled = !giaTri;
+            numSucChua.Enabled = !giaTri;
+            cboLoaiXe.Enabled = !giaTri;
+            cboTinhTrang.Enabled = !giaTri;
+            txtMoTa.Enabled = !giaTri;
+            numGheNgoi.Enabled = !giaTri;
+            numGiuongNam.Enabled = !giaTri;
+            picHinhAnh.Enabled = !giaTri;
+            btnDoiAnh.Enabled = !giaTri;
         }
         private void frmXe_Load(object sender, EventArgs e)
         {

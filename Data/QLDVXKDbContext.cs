@@ -15,6 +15,8 @@ namespace QuanLyDatVeXeKhach.Data
         public DbSet<BenXe> BenXe { get; set; }
         public DbSet<TuyenXe> TuyenXe { get; set; }
         public DbSet<Xe> Xe { get; set; }
+        public DbSet<DichVu> DichVu { get; set; }
+        public DbSet<LoaiXe> LoaiXe { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

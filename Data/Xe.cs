@@ -18,7 +18,7 @@ namespace QuanLyDatVeXeKhach.Data
         public string MoTa { get; set; } // Mô tả chi tiết về xe, có thể bao gồm thông tin về tiện nghi, dịch vụ trên xe, v.v.
 
         public int LoaiXeID { get; set; } // Limousine, giường nằm, ghế ngồi, giường phòng, hỗn hợp,...
-
+        public string TenLoaiXe { get; set; } // Tên loại xe, ví dụ: Limousine, giường nằm, ghế ngồi, giường phòng, hỗn hợp,...
         public virtual ObservableCollectionListSource<VeXe> VeXe { get; } = new();
 
     }

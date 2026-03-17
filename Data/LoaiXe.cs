@@ -9,7 +9,7 @@ namespace QuanLyDatVeXeKhach.Data
     {
         public int ID { get; set; }
         public string TenLoaiXe { get; set; }
-        public string SoDoChoNgoi { get; set; } //hinh anh so do cho ngoi cua xe
+        public string? SoDoChoNgoi { get; set; } //hinh anh so do cho ngoi cua xe
         public virtual ObservableCollectionListSource<Xe> Xe { get; } = new();
     }
 }
